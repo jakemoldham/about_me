@@ -1,2 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#hero {
+  height: 600px;
+  background-color: black;
+}
+
+#herocontent {
+  color: white;
+  font-size: 8em;
+  margin-left: 40%;
+  padding-top: 200px;
+}
