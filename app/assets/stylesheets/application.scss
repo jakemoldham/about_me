@@ -2,13 +2,23 @@
 @import "bootstrap";
 
 #hero {
-  height: 600px;
+  height: 800px;
   background-color: black;
 }
 
-#herocontent {
+#herohalf {
+  height: 800px;
+  width: 50%;
+  opacity: 0.3;
+  margin-top: -450px;
+  background-color: red;
+}
+ 
+#herotext {
+  font-size: 100px;
+  padding-top: 300px;
+  margin-left: 10%;
+  margin-right: -10%;
+  width: 80%;
   color: white;
-  font-size: 8em;
-  margin-left: 40%;
-  padding-top: 200px;
 }
