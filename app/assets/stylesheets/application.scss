@@ -1,24 +1,100 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#hero {
-  height: 800px;
-  background-color: black;
+
+.section {
+    /* the important one */
+    background-attachment: fixed; 
+ 
+    background-size: auto 80%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
 }
 
-#herohalf {
-  height: 800px;
-  width: 50%;
-  opacity: 0.3;
-  margin-top: -450px;
-  background-color: red;
+#section1 {
+    background-image: url(photo2.JPG);
+}
+#section2 {
+    background-image: url(photo4.JPG);
+}
+#section3 {
+    background-image: url(photo5.JPG);
+}
+#section4 {
+    background-image: url(photo4.JPG);
+}
+#section4 .content {
+    top: 100%;
+    position: absolute;
+    left: 0;
+}
+
+#arrow{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    outline: 0;
+    z-index: 100;
+    color: #BBB;
+    background: transparent;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    font: 36px Heiti, 'Lucida Grande', Arial;
+    font-weight: bold;
+}
+#arrow span{
+    display: inline-block;
+    position: relative;
+    top: -18px;
+    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+#arrow:hover{
+    background: #EC008C;
+}
+#arrow:hover span{
+    top: 0;
+    color: #FFF;
+}
+
+/* Styling titles and text for the sections with backgrounds*/
+.intro {
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    width: 100%;
+}
+.intro h1 {
+    font-size: 5em;
+    font-weight: bold;
+    color: #000;
 }
  
-#herotext {
-  font-size: 100px;
-  padding-top: 300px;
-  margin-left: 10%;
-  margin-right: -10%;
-  width: 80%;
-  color: white;
+/* Styling our last section, our content */
+#section4 .intro {
+    color: #000;
+}
+.page {
+    width: 80%;
+    margin: 60px auto;
+    background:white;
+    padding: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.page p {
+    font-style: 12px;
+    margin: 20px 0 0 0;
+    line-height: 1.35em;
+    color: #333;
 }
