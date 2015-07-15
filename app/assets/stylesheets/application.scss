@@ -1,20 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#hero {
+ul {
+  position: fixed;
+  margin-left: 90%;
+  // color: white;
+}
+
+#hero, #secondhero, #thirdhero {
   height: 800px;
   background-color: black;
 }
 
-#herohalf {
+#herohalf, #secondherohalf, #thirdherohalf {
   height: 800px;
   width: 50%;
   opacity: 0.3;
-  margin-top: -450px;
+  margin-top: -800px;
   background-color: red;
 }
+
+#secondherohalf {
+  margin-left: 50%;
+  background-color: blue;
+}
+
+#thirdherohalf {
+  background-color: green;
+}
  
-#herotext {
+#herotext, #secondherotext, #thirdherotext {
   font-size: 100px;
   padding-top: 300px;
   margin-left: 10%;
