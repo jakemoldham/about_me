@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>AboutMe</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag    'jquery.pagepiling', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'jquery.pagepiling.min' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
