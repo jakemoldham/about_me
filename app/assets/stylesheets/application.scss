@@ -1,100 +1,193 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "static_pages";
 
+@font-face {
+  font-family: 'ProximaNova';    
+   src:font-url('ProximaNova/Proxima-Nova-Regular.otf');
+}
+@font-face {
+  font-family: 'ProximaNovaBlack';    
+   src:font-url('ProximaNova/Proxima-Nova-Black.otf');
+}
+@font-face {
+  font-family: 'Quadon';    
+   src:font-url('Quadon/Quadon.otf');
+}
+@font-face {
+  font-family: 'QuadonLight';    
+   src:font-url('Quadon/Quadon-light.otf');
+}
 
 .section {
-    /* the important one */
-    background-attachment: fixed; 
- 
-    background-size: auto 80%;
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
+  /* the important one */
+  background-attachment: fixed; 
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #section1 {
-    background-image: url(photo2.JPG);
+  background-image: url(hero.png);
+   @media screen and (max-width: 1000px){
+    background-size: 2200px;
+   } 
 }
 #section2 {
-    background-image: url(photo4.JPG);
-}
-#section3 {
-    background-image: url(photo5.JPG);
+  background-image: url();
 }
 #section4 {
-    background-image: url(photo4.JPG);
+  background-image: url(header.png);
 }
 #section4 .content {
-    top: 100%;
-    position: absolute;
-    left: 0;
+  top: 100%;
+  position: absolute;
+  left: 0;
 }
 
-#arrow{
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    cursor: pointer;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border: 0;
-    outline: 0;
-    z-index: 100;
-    color: #BBB;
-    background: transparent;
-    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
-    font: 36px Heiti, 'Lucida Grande', Arial;
-    font-weight: bold;
-}
-#arrow span{
-    display: inline-block;
-    position: relative;
-    top: -18px;
-    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
-}
-#arrow:hover{
-    background: #EC008C;
-}
-#arrow:hover span{
-    top: 0;
-    color: #FFF;
+#dreaming {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  min-width: 20%;
+  max-width: 90%;
+   @media screen and (max-width: 700px){
+    margin-top: 100px;
+   } 
 }
 
-/* Styling titles and text for the sections with backgrounds*/
-.intro {
+.logohero, #logoherostatic {
+  margin-left: 30px;
+  margin-top: 30px;
+  position: fixed;
+}
+
+#logoherostatic {
+  position: fixed;
+}
+
+#herotext {
+  color: grey;
+  margin-left: 50%;
+  padding-left: 20px;
+  font-family: 'ProximaNova';
+  font-size: 18px;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-color: yellow;
+   @media screen and (max-width: 500px){
+    border: none;
+   } 
+}
+
+#pp-nav.right {
+    left: 17px;
+}
+
+
+#section2-content {
+  margin-left: 20%;
+  margin-top: 10%;
+   h3 {
+    color: black;
+    font-size: 30px;
+    font-family: 'QuadonMedium';
+   } p {
+    color: grey;
+    font-size: 20px;
+    font-family: 'Quadon';
+    letter-spacing: 1px;
+   } button {
+    color: grey;
+    font-size: 16px;
+    border: none;
+    padding: 10px 45px;
+    background-color: #333333;
+    font-family: 'ProximaNova';
+    font-weight: 2;
+    letter-spacing: 1px;
+   } @media screen and (max-width: 700px){
+    margin-top: 100px;
+   } #downloadicon {
+    margin-top: -4px;
+    margin-left: 5px;
+   }
+}
+
+#section3-content {
+  margin-top: 110px;
+  margin-left: 20%;
+  height: 600px;
+   h3 {
+    font-size: 22px;
+    font-family: 'Quadon';
+    color: white;
+   } p {
+    color: grey;
+    width: 530px;
+    font-size: 16px;
+    font-family: 'ProximaNova'
+   } #stripelogo {
+    margin-top: -195px; 
+    margin-left: 520px;
+    opacity: .2;
+   } #papercliplogo {
+    margin-top: -195px;
+    margin-left: 15px;
+    opacity: .2;
+   } #deviselogo {
+    margin-top: -195px;
+    margin-left: 15px;
+    opacity: .2;
+   } #postgresslogo {
+    margin-top: -110px;
+    margin-left: -155px;
+    opacity: .2;
+   } #onmiauthlogo {
+    margin-top: -115px;
+    margin-left: 12px;
+    opacity: .2;
+   } #bootstraplogo {
+    margin-top: -110px;
+    margin-left: 15px;
+    opacity: .2;
+   }
+}
+
+#section3-buttons {
+   margin-left: 20%;  
+   #livebtn, #sourcebtn {
     position: absolute;
-    bottom: 100px;
-    text-align: center;
-    width: 100%;
+    color: lightgrey;
+    font-size: 16px;
+    border: none; 
+    background-color: grey;
+    font-family: 'ProximaNova';
+    font-weight: 2;
+    letter-spacing: 1px;
+   } #livebtn {
+    padding: 10px 55px;
+   } #sourcebtn {
+    margin-left: 155px;
+    padding: 10px 45px;
+   } 
 }
-.intro h1 {
-    font-size: 5em;
-    font-weight: bold;
-    color: #000;
+
+#section4-header-content {
+  width: 100%;
+  height: 35%;
 }
- 
-/* Styling our last section, our content */
-#section4 .intro {
-    color: #000;
+#section4-p {
+  color: white;
+  font-size: 45px;
+  margin-top: 80px;
+  margin-left: 20%;
+  font-family: 'Quadon';
 }
-.page {
-    width: 80%;
-    margin: 60px auto;
-    background:white;
-    padding: 60px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.page p {
-    font-style: 12px;
-    margin: 20px 0 0 0;
-    line-height: 1.35em;
-    color: #333;
+
+#graystripe {
+  margin-top: 50px;
+  width: 100%;
 }

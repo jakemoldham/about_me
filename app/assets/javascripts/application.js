@@ -1,15 +1,3 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -25,7 +13,7 @@ $(document).ready(function() {
   $('#pagepiling').pagepiling({
     verticalCentered:false,
     css3:false,
-    sectionsColor: ['white', '#E8E8E8', '#f2f2f2', '#EC008C'],
+    sectionsColor: ['white', '#E8E8E8', '#333333', '#E8E8E8'],
     onLeave: function(index, nextIndex, direction){
 
       //fading out the txt of the leaving section
@@ -60,6 +48,6 @@ $(document).ready(function() {
 });
 
 $('#arrow').click(function () {
-    $.fn.pagepiling.moveSectionDown();
+  $.fn.pagepiling.moveSectionDown();
 });
 

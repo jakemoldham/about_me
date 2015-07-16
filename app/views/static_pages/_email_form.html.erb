@@ -1,0 +1,15 @@
+<%= form_for emailform, remote: true do |f| %>
+  <%= render 'layouts/error_messages', object: f.object %>
+  <%= token_tag nil %>
+
+  <%= f.label :name %>
+  <%= f.file_field :name %>
+
+  <%= f.label :email %> 
+  <%= f.text_field :email, :maxlength => 32, class: 'form-control' %>
+
+  <%= f.label :message %>
+  <%= f.text_area :message, class: 'form-control'  %>
+
+  <%= f.submit "Submit", class: "btn btn-primary event-submit-btn", id: "events-btn-space"  %>
+<% end %>

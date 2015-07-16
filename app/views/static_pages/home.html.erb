@@ -1,26 +1,50 @@
 <div id="pagepiling">
+    <%= image_tag('logo-light.png', id: 'logoherostatic') %>
   <div class="section" id="section1">
-    <div class="intro">
-      <h1>All business.</h1>
-      <p>A new home for the word's most influencial management magazine.</p>
-    </div>
+    <%= image_tag('logo-light.png', class: 'logohero') %>
+    <%= image_tag('dreaming.png', id: 'dreaming') %>
+    <p id="herotext">FULL STACK RUBY DEVELOPER<br>
+                     CYCLING ENTHUSIAST</p>
   </div>
   <div class="section" id="section2">
-    <div class="intro">
-      <h1>Nike Making.</h1> 
-      <p>Inspiring the creative community to make sustainable design choices.</p>
+    <%= image_tag('logo-dark.png', class: 'logohero') %>
+    <div id="section2-content">
+     <%= image_tag('avatar.png') %>
+     <h3>Hello, I'm Jake Oldham.</h3>
+     <p>I am a full-stack developer. After a career in sales I went back to <br>
+        school to pursue a career that both challenged and excited me.<br>
+        I'm ready to work in a fast paced environment where I can<br>
+        continue learning to do what I love.</p>
+        <a href="/about"><button>RESUME<%= image_tag("ic-download.png", id: 'downloadicon') %></button></a>
     </div>
   </div>
   <div class="section" id="section3">
-     <div class="intro">
-      <h1>Floored.</h1>
-      <p>Clean, modern, and fast. Introducing the new Lexus.com.</p>
-     </div>
+      <%= image_tag('logo-light.png', class: 'logohero') %>
+       <div id="section3-content">
+        <%= image_tag('agoge.png') %>
+        <h3>My DevPoint Capstone</h3>
+        <p>Working as a team of 3, I was able to assist in building a website where<br>
+           users could sign up, pay for, and enroll in Saturday afternoon coding<br>
+           classes. Here I was able to demonstrate my knowledge of Ruby on Rails,<br>
+           JQuery, HTML5 and CSS3.</p>
+        <%= image_tag('stripe.png', id: 'stripelogo') %>
+        <%= image_tag('paperclip.png', id: 'papercliplogo') %>
+        <%= image_tag('devise.png', id: 'deviselogo') %>
+        <%= image_tag('postgress.png', id: 'postgresslogo') %>
+        <%= image_tag('onmiauth.png', id: 'onmiauthlogo') %>
+        <%= image_tag('bootstrap.png', id: 'bootstraplogo') %>
+       </div>
+       <div id="section3-buttons">
+        <a href="http://www.agoge.club" target="blank"><button id="livebtn">LIVE</button></a>
+        <a href="https://github.com/jakemoldham/Capstone" target="blank"><button id="sourcebtn">SOURCE</button></a>
+       </div>  
   </div>
   <div class="section" id="section4">
-    <div class="content">
-      <h1>bagaloo</h1>
-      <p>My normal website</p>
-    </div>
+     <%= image_tag('logo-light.png', class: 'logohero') %>
+     <p id="section4-p">
+      It's time we knew<br>
+      one another.
+     </p>
+    <%= image_tag('graystrip.png', id: 'graystripe') %>
   </div>
 </div>
