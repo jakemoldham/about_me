@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
 
   
+  get 'contact/new'
+
+  get 'contact/create'
+
   root 'static_pages#home'
 
   get  'static_pages/about'
 
   get  'static_pages/contact'
+
+  get 'contact', to: 'contacts#new', as: 'contact'
+  post 'contact', to: 'contacts#create'
+
+  post 'contact/create', to: 'contact#create', as: :send_contact_mailer_path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

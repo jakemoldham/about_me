@@ -187,7 +187,21 @@
   font-family: 'Quadon';
 }
 
-#graystripe {
+#graystrip {
   margin-top: 50px;
   width: 100%;
+}
+
+.contactxt {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.contactxt:hover {
+  color: yellow;
+}
+
+#email {
+  margin-top: -100px;
+
 }
