@@ -21,8 +21,8 @@
 
 .section {
   /* the important one */
-  background-attachment: fixed; 
   background-size: 100%;
+  background-attachment: fixed; 
   background-repeat: no-repeat;
 }
 
@@ -35,6 +35,10 @@
 
 #section4 {
   background-image: image-url('header.png');
+   @media screen and (max-width: 1400px){
+    background-size: 1800px;
+    height: 310px;
+   } 
 }
 #section4 .content {
   top: 100%;
@@ -102,6 +106,7 @@
     font-size: 16px;
     border: none;
     padding: 10px 45px;
+    margin: 50px 0px;
     background-color: #333333;
     font-family: 'ProximaNova';
     font-weight: 2;
@@ -114,10 +119,61 @@
    }
 }
 
+.exerience {
+  width: 700px;
+  height: 700px;
+  padding-top: 60px;
+  margin-top: 30px;
+  border: solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-color: gray;
+  border-width: thin;
+}
+
+.expbar {
+  background-color: rgb(229, 229, 37);
+  width: 300px;
+  height: 13px;
+}
+
+.html5 {
+  margin: 20px 20px 20px 0px;
+
+}
+
+.css3text {
+  margin-left: 320px;
+  margin-top: -37px;
+}
+
+.css3 {
+  margin: -33px 0px 20px 320px;
+}
+
+.rubyrails {
+  margin: 60px 20px 0px 0px;
+}
+
+.rubyrailstext {
+  margin-top: -55px;
+}
+
+.javascriptjqy {
+  margin: -13px 0px 0px 320px;
+}
+
+.javascriptjqytext {
+  margin-left: 320px;
+  margin-top: -38px;
+}
+
 #section3-content {
   margin-top: 110px;
   margin-left: 20%;
   height: 600px;
+  width: 700px;
    h3 {
     font-size: 22px;
     font-family: 'Quadon';
@@ -178,20 +234,25 @@
   height: 35%;
 }
 #section4-p {
+  width: 500px;
   color: white;
   font-size: 45px;
   margin-top: 80px;
-  margin-left: 20%;
+  margin-left: 200px;
   font-family: 'Quadon';
 }
 
 #graystrip {
-  margin-top: 50px;
-  width: 100%;
+  margin-top: 100px;
+  width: 2000px;
+  height: 100px;
+   @media screen and (max-width: 1500px){
+    margin-top: 85px;
+   } 
 }
 
 .contactxt {
-  color: white;
+  color: gray;
   text-decoration: none;
   display: block;
 }
@@ -199,7 +260,72 @@
   color: yellow;
 }
 
-#email {
-  margin-top: -100px;
+.contact_links img {
+  padding-right: 10px;
+}
 
+#email {
+  margin-top: -60px;
+  margin-left: 210px;
+}
+
+#cell {
+  margin-top: -21px;
+  margin-left: 444px;
+}
+
+#github {
+  margin-top: -22px;
+  margin-left: 600px;
+}
+
+.name {
+  width: 200px;
+  margin-left: 210px;
+  margin-top: 100px;
+}
+
+.email {
+  margin-left: 532px;
+  margin-top: -50px;
+}
+
+// text field sizing
+.form_area {
+  width: 300px;
+  height: 50px;
+  font-family: 'Quadon';
+  font-size: 16px;
+}
+
+.message {
+  margin-left: 210px;
+  margin-top: 50px;
+}
+
+.form_message_area {
+  width: 623px;
+  height: 100px;
+  font-family: 'Quadon';
+  font-size: 16px;
+}
+
+.submit {
+  margin-left: 210px;
+  margin-top: 15px;
+}
+
+.form_submit {
+  color: grey;
+  background-color: #333;
+  font-size: 20px;
+  font-family: 'ProximaNova';
+  height: 50px;
+  width: 200px;
+}
+
+// ABOUT PAGE
+
+.resume {
+  background-image: image-url('resume.pdf')
 }
