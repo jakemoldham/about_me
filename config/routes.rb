@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
-  
-  get 'contact/new'
-
-  get 'contact/create'
 
   get '/about', to: 'static_pages#about', as: :about
 

@@ -1,11 +1,9 @@
 class ContactMailer < ApplicationMailer
-  default from: 'notifications@example.com'
-  default to: 'jakemoldham@gmail.com'
 
   def new(contact)
     @name = contact.name
     @email = contact.email
     @message = contact.message
-    mail(to: 'jakemoldham@gmail.com', subject: 'Email from #{@name}', from: @email)
+    mail(to: 'jakemoldham@gmail.com', subject: "Email from #{@name} at #{@email}")
   end
 end
