@@ -26,6 +26,14 @@
   background-repeat: no-repeat;
 }
 
+// Navigation customization alignment
+
+#pp-nav.right {
+    left: 17px;
+}
+
+// fixed background images
+
 #section1 {
   background-image: image-url('hero.png');
    @media screen and (max-width: 1000px){
@@ -35,7 +43,7 @@
 
 #section4 {
   background-image: image-url('header.png');
-    background-size: 1800px;
+    background-size: 2000px;
     height: 310px;
 }
 #section4 .content {
@@ -43,6 +51,8 @@
   position: absolute;
   left: 0;
 }
+
+// Section 1 content
 
 #dreaming {
   display: block;
@@ -82,10 +92,7 @@
    } 
 }
 
-#pp-nav.right {
-    left: 17px;
-}
-
+// Section 2 content
 
 #section2-content {
   margin-left: 20%;
@@ -167,6 +174,8 @@
   margin-top: -38px;
 }
 
+// Section 3 content
+
 #section3-content {
   margin-top: 110px;
   margin-left: 20%;
@@ -227,6 +236,8 @@
    } 
 }
 
+// Section 4 content
+
 #section4-header-content {
   width: 100%;
   height: 35%;
@@ -241,12 +252,9 @@
 }
 
 #graystrip {
-  margin-top: 100px;
-  width: 100%;
+  margin-top: 80px;
+  width: 2000px;
   height: 100px;
-   @media screen and (max-width: 1500px){
-    margin-top: 85px;
-   } 
 }
 
 .contactxt {
