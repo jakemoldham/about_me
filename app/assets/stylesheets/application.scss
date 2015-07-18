@@ -35,10 +35,8 @@
 
 #section4 {
   background-image: image-url('header.png');
-   @media screen and (max-width: 1400px){
     background-size: 1800px;
     height: 310px;
-   } 
 }
 #section4 .content {
   top: 100%;
