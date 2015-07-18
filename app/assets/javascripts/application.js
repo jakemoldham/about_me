@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('#pagepiling').pagepiling({
     verticalCentered:false,
     css3:false,
-    sectionsColor: ['white', '#E8E8E8', '#333333', '#E8E8E8'],
+    sectionsColor: ['black', '#E8E8E8', '#333333', '#E8E8E8'],
     onLeave: function(index, nextIndex, direction){
 
       //fading out the txt of the leaving section
