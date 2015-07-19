@@ -8,7 +8,8 @@ class ContactsController < ApplicationController
     
     if @contact.valid?
       ContactMailer.new(@contact).deliver
-      redirect_to root_path, flash[:success] = "Message has been successfully sent."
+      flash[:success] = "Message has been successfully sent."
+      redirect_to root_path 
     else
       flash[:danger] = "PLEASE! You can't leave stuff blank, fill it out!"
       redirect_to root_path
