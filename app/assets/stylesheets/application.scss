@@ -7,16 +7,8 @@
    src:font-url('ProximaNova/Proxima-Nova-Regular.otf');
 }
 @font-face {
-  font-family: 'ProximaNovaBlack';    
-   src:font-url('ProximaNova/Proxima-Nova-Black.otf');
-}
-@font-face {
   font-family: 'Quadon';    
    src:font-url('Quadon/Quadon.otf');
-}
-@font-face {
-  font-family: 'QuadonLight';    
-   src:font-url('Quadon/Quadon-light.otf');
 }
 
 .section {
@@ -26,10 +18,17 @@
   background-repeat: no-repeat;
 }
 
+.main-alert {
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  text-align: center;
+}
+
 // Navigation customization alignment
 
 #pp-nav.right {
-    left: 17px;
+    right: 17px;
 }
 
 // fixed background images
@@ -120,6 +119,9 @@
     font-family: 'ProximaNova';
     font-weight: 2;
     letter-spacing: 1px;
+   } button:hover {
+    color: yellow;
+    background-color: black; 
    } @media screen and (max-width: 700px){
     margin-top: 100px;
    } #downloadicon {
@@ -237,7 +239,10 @@
    } #sourcebtn {
     margin-left: 155px;
     padding: 10px 45px;
-   } 
+   } #livebtn:hover, #sourcebtn:hover {
+    color: yellow;
+    background-color: black;
+   }
 }
 
 // Section 4 content
@@ -266,6 +271,7 @@
   text-decoration: none;
   display: block;
 }
+
 .contactxt:hover {
   color: yellow;
 }
@@ -332,6 +338,11 @@
   font-family: 'ProximaNova';
   height: 50px;
   width: 200px;
+}
+
+.form_submit:hover {
+  color: yellow;
+  background-color: black;
 }
 
 // ABOUT PAGE
