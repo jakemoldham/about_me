@@ -18,6 +18,13 @@
   background-repeat: no-repeat;
 }
 
+.main-alert {
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  text-align: center;
+}
+
 // Navigation customization alignment
 
 #pp-nav.right {

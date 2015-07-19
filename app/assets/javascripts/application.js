@@ -6,6 +6,9 @@
 //= require jquery.pagepiling.min
 //= require_tree .
 
+$(".alert-message").alert();
+window.setTimeout(function() { $(".alert-message").alert('close'); }, 3000);
+
 $(document).ready(function() {
   /*
   * Plugin intialization
@@ -46,8 +49,3 @@ $(document).ready(function() {
     },
   });
 });
-
-$('#arrow').click(function () {
-  $.fn.pagepiling.moveSectionDown();
-});
-
