@@ -50,15 +50,16 @@
        </div>  
   </div>
   <div class="section" id="section4">
-     <%= image_tag('logo-light.png', class: 'logohero') %>
-      <p id="section4-p">
+    <div class="custom4"<%= image_tag('logo-light.png', class: 'logohero') %>
+       <p id="section4-p">
         It's time we get to<br>
         know one another.
-      </p>     
+       </p> 
+    </div>
       <%= image_tag('graystrip.png', id: 'graystrip') %>
       <div class="contact_links">
       <a href="mailto:jakemoldham@gmail.com" class="contactxt" id="email"><%= image_tag("ic-email.png") %>jakemoldham@gmail.com</a>
-      <a href="tel:3853292770" class="contactxt" id="cell"><%= image_tag("ic-cell.png") %>385-329-2770</a>
+      <div class="contactxt" id="cell"><%= image_tag("ic-cell.png") %>385-329-2770</div>
       <a href="https://github.com/jakemoldham" target="blank" class="contactxt" id="github"><%= image_tag("ic-github.png") %>jakemoldham</a>
       </div>
       <%= render partial: 'email_form'%>
