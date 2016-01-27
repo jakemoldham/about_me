@@ -11,9 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160111231524) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "http_errors", force: :cascade do |t|
+    t.text     "request",       limit: 65535
+    t.text     "response",      limit: 65535
+    t.text     "url",           limit: 65535
+    t.string   "method",        limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.text     "response_code", limit: 65535
+  end
+
+  create_table "mappings", force: :cascade do |t|
+    t.string   "workfront_id", limit: 255
+    t.integer  "parent_id",    limit: 4
+    t.string   "jira_id",      limit: 255
+    t.string   "object_type",  limit: 255
+    t.text     "jira_data",    limit: 65535
+    t.text     "wf_data",      limit: 65535
+    t.boolean  "active",       limit: 1,     default: true
+    t.boolean  "error_state",  limit: 1,     default: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+  end
+
+  create_table "tokens", force: :cascade do |t|
+    t.string   "provider",   limit: 255
+    t.string   "token",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "user_mappings", force: :cascade do |t|
+    t.string   "workfront_id", limit: 255
+    t.string   "jira_id",      limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
 end
