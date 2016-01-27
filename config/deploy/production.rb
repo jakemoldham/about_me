@@ -20,7 +20,7 @@ set :env, "production"
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-domains = %w{159.203.221.158}
+domains = %w{jakeoldham.com}
 role :app, domains
 role :web, domains
 role :db,  domains 
