@@ -3,8 +3,9 @@ lock '3.4.0'
 
 set :application, 'jakeoldham'
 set :repo_url, 'git@github.com:jakemoldham/about_me.git'
+set :branch, :master
 
-Default branch is :master
+# Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
