@@ -8,60 +8,72 @@
   </div>
   <div class="section" id="section2">
     <%= image_tag('logo-dark.png', class: 'logohero') %>
-    <div id="section2-content">
-     <%= image_tag('avatar.png') %>
-     <h3>Hello, I'm Jake Oldham.</h3>
-     <p>I am a full-stack developer. After a career in sales I went back to <br>
-        school to pursue a career that both challenged and excited me.<br>
-        I'm ready to work in a fast paced environment where I can<br>
-        continue learning to do what I love.</p>
-     <div class="exerience">
-       <p>HTML 5</p>
-       <p class="css3text">CSS 3</p>
-       <div class="html5 expbar"></div>
-       <div class="css3 expbar"></div>
-       <div class="rubyrails expbar"></div>
-       <div class="javascriptjqy expbar"></div>
-       <p class="rubyrailstext">Ruby/Rails</p>
-       <p class="javascriptjqytext">Javascript/Jquery</p>
-         <a href="assets/resume.pdf" download="JakeOldham.pdf"><button>RESUME<%= image_tag("ic-download.png", id: 'downloadicon') %></button></a>
-     </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div id="section2-content">
+        <%= image_tag('avatar.png') %>
+        <h3>Hello, I'm Jake Oldham.</h3>
+        <p>I am a full-stack developer. After a career in sales I went back to <br>
+          school to pursue a career that both challenged and excited me.<br>
+          I'm ready to work in a fast paced environment where I can<br>
+          continue learning to do what I love.</p>
+        <div class="exerience">
+          <p>HTML 5</p>
+          <p class="css3text">CSS 3</p>
+          <div class="html5 expbar"></div>
+          <div class="css3 expbar"></div>
+          <div class="rubyrails expbar"></div>
+          <div class="javascriptjqy expbar"></div>
+          <p class="rubyrailstext">Ruby/Rails</p>
+          <p class="javascriptjqytext">Javascript/Jquery</p>
+            <a href="assets/resume.pdf" download="JakeOldham.pdf"><button>RESUME<%= image_tag("ic-download.png", id: 'downloadicon') %></button></a>
+       </div>
+      </div>
     </div>
+    <div class="col-md-3"></div>
   </div>
   <div class="section" id="section3">
-      <%= image_tag('logo-light.png', class: 'logohero') %>
-       <div id="section3-content">
+    <%= image_tag('logo-light.png', class: 'logohero') %>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div id="section3-content">
         <%= image_tag('agoge.png') %>
         <h3>My DevPoint Capstone</h3>
         <p>Working as a team of 3, I was able to assist in building a website where<br>
-           users could sign up, pay for, and enroll in Saturday afternoon coding<br>
-           classes. Here I was able to demonstrate my knowledge of Ruby on Rails,<br>
-           JQuery, HTML5 and CSS3.</p>
+          users could sign up, pay for, and enroll in Saturday afternoon coding<br>
+          classes. Here I was able to demonstrate my knowledge of Ruby on Rails,<br>
+          JQuery, HTML5 and CSS3.</p>
         <%= image_tag('stripe.png', id: 'stripelogo') %>
         <%= image_tag('paperclip.png', id: 'papercliplogo') %>
         <%= image_tag('devise.png', id: 'deviselogo') %>
         <%= image_tag('postgress.png', id: 'postgresslogo') %>
         <%= image_tag('onmiauth.png', id: 'onmiauthlogo') %>
         <%= image_tag('bootstrap.png', id: 'bootstraplogo') %>
-       </div>
-       <div id="section3-buttons">
+      <div id="section3-buttons">
         <a href="http://www.agoge.club" target="blank"><button id="livebtn">LIVE</button></a>
         <a href="https://github.com/jakemoldham/Capstone" target="blank"><button id="sourcebtn">SOURCE</button></a>
-       </div>  
+      </div>  
+      </div>
+    </div>
+    <div class="col-md-3"></div>
   </div>
   <div class="section" id="section4">
-    <div class="custom4"<%= image_tag('logo-light.png', class: 'logohero') %>
+    <div class="custom4"<%= image_tag('logo-light.png', class: 'logohero') %>>
        <p id="section4-p">
         It's time we get to<br>
         know one another.
        </p> 
     </div>
       <%= image_tag('graystrip.png', id: 'graystrip') %>
-      <div class="contact_links">
-      <a href="mailto:jakemoldham@gmail.com" class="contactxt" id="email"><%= image_tag("ic-email.png") %>jakemoldham@gmail.com</a>
-      <div class="contactxt" id="cell"><%= image_tag("ic-cell.png") %>385-329-2770</div>
-      <a href="https://github.com/jakemoldham" target="blank" class="contactxt" id="github"><%= image_tag("ic-github.png") %>jakemoldham</a>
+      <div class="col-md-3 hide-sc4"></div>
+      <div class="col-md-6">
+        <div class="contact_links">
+          <a href="mailto:jakemoldham@gmail.com" class="contactxt" id="email"><%= image_tag("ic-email.png") %>jakemoldham@gmail.com</a>
+          <div class="contactxt" id="cell"><%= image_tag("ic-cell.png") %>385-329-2770</div>
+          <a href="https://github.com/jakemoldham" target="blank" class="contactxt" id="github"><%= image_tag("ic-github.png") %>jakemoldham</a>
+        </div>
+        <%= render partial: 'email_form'%>
       </div>
-      <%= render partial: 'email_form'%>
+      <div class="col-md-3"></div>
   </div>
 </div>
