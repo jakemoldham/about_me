@@ -1,0 +1,96 @@
+#pagepiling
+  = image_tag('logo-light.png', id: 'logoherostatic')
+  #section1.section
+    = image_tag('logo-light.png', class: 'logohero')
+    = image_tag('dreaming.png', id: 'dreaming')
+    p#herotext
+      | FULL STACK RUBY DEVELOPER
+      br
+      |  CYCLING ENTHUSIAST
+  #section2.section
+    = image_tag('logo-dark.png', class: 'logohero')
+    .col-md-3
+    .col-md-6
+      #section2-content
+        = image_tag('avatar.png')
+        h3
+          | Hello, I'm Jake Oldham.
+        p
+          | I am a full-stack developer. After a career in sales I went back to 
+          br
+          |  school to pursue a career that both challenged and excited me.
+          br
+          |  I'm ready to work in a fast paced environment where I can
+          br
+          |  continue learning to do what I love.
+        .exerience
+          p
+            | HTML 5
+          p.css3text
+            | CSS 3
+          .html5.expbar
+          .css3.expbar
+          .rubyrails.expbar
+          .javascriptjqy.expbar
+          p.rubyrailstext
+            | Ruby/Rails
+          p.javascriptjqytext
+            | Javascript/Jquery
+          a[href="assets/resume.pdf" download="JakeOldham.pdf"]
+            button
+              | RESUME
+              = image_tag("ic-download.png", id: 'downloadicon')
+    .col-md-3
+  #section3.section
+    = image_tag('logo-light.png', class: 'logohero')
+    .col-md-3
+    .col-md-6
+      #section3-content
+        = image_tag('agoge.png')
+        h3
+          | My DevPoint Capstone
+        p
+          | Working as a team of 3, I was able to assist in building a website where
+          br
+          |  users could sign up, pay for, and enroll in Saturday afternoon coding
+          br
+          |  classes. Here I was able to demonstrate my knowledge of Ruby on Rails,
+          br
+          |  JQuery, HTML5 and CSS3.
+        = image_tag('stripe.png', id: 'stripelogo')
+        = image_tag('paperclip.png', id: 'papercliplogo')
+        = image_tag('devise.png', id: 'deviselogo')
+        = image_tag('postgress.png', id: 'postgresslogo')
+        = image_tag('onmiauth.png', id: 'onmiauthlogo')
+        = image_tag('bootstrap.png', id: 'bootstraplogo')
+        #section3-buttons
+          a[href="http://www.agoge.club" target="blank"]
+            button#livebtn
+              | LIVE
+          a[href="https://github.com/jakemoldham/Capstone" target="blank"]
+            button#sourcebtn
+              | SOURCE
+    .col-md-3
+  #section4.section
+    |  <div class="custom4"
+    = image_tag('logo-light.png', class: 'logohero')
+    | > 
+    p#section4-p
+      |  It's time we get to
+      br
+      |  know one another. 
+  = image_tag('graystrip.png', id: 'graystrip')
+  .col-md-3.hide-sc4
+  .col-md-6
+    .contact_links
+      a#email.contactxt[href="mailto:jakemoldham@gmail.com"]
+        = image_tag("ic-email.png")
+        | jakemoldham@gmail.com
+      #cell.contactxt
+        = image_tag("ic-cell.png")
+        | 385-329-2770
+      a#github.contactxt[href="https://github.com/jakemoldham" target="blank"]
+        = image_tag("ic-github.png")
+        | jakemoldham
+    = render partial: 'email_form'
+  .col-md-3
