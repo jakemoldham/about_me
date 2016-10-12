@@ -1,0 +1,26 @@
+= form_for @vim do |f|
+  - if @vim.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@vim.errors.count, "error")} prohibited this vim from being saved:"
+      ul
+        - @vim.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    .col-md-12
+      = f.label :title
+    .col-md-12
+      = f.text_field :title, class: "vim-text-field"
+  .field
+    .col-md-12
+      = f.label :code
+    .col-md-12
+      = f.text_area :code, class: "vim-text-field"
+  .field
+    .col-md-12
+      = f.label :description
+    .col-md-12
+      = f.text_field :description, class: "vim-text-field"
+  br
+  .col-md-12
+    .actions.vim-submit = f.submit

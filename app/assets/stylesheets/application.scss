@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "static_pages";
+@import "vims";
 
 @font-face {
   font-family: 'ProximaNova';    
@@ -206,7 +207,7 @@ only screen and (min-device-pixel-ratio: 2) {
     color: grey;
     width: 530px;
     font-size: 16px;
-    font-family: 'ProximaNova'
+    font-family: 'ProximaNova';
    } #stripelogo {
     margin-top: -195px; 
     margin-left: 520px;

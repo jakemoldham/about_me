@@ -1,0 +1,22 @@
+.container
+  h1 Vanilla Vim 
+  hr
+  - @vims.each do |vim|
+    tr
+      h3.vim-title = vim.title
+      br
+      | Description:
+      .vim-desc = vim.description
+      br
+      | Vim Command:
+      .vim-code = vim.code
+      hr
+      /*= link_to 'Show', vim*/
+      /*br*/
+      /*= link_to 'Edit', edit_vim_path(vim)*/
+      /*br*/
+      /*= link_to 'Destroy', vim, data: { confirm: 'Are you sure?' }, method: :delete*/
+
+  br
+
+  = link_to 'New Vim', new_vim_path

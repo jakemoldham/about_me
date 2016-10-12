@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get '/about', to: 'static_pages#about', as: :about
-
   get  'static_pages/contact'
 
   get 'contact', to: 'contacts#new', as: 'contact'
   post 'contact', to: 'contacts#create'
 
   post 'contact/create', to: 'contact#create', as: :send_contact_mailer_path
+
+  resources :vims
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
