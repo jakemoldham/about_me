@@ -1,6 +1,25 @@
 h1 {
   font-family: 'ProximaNova';
+  display: inline-block;
 }
+
+.vim-home {
+  float: right;
+  margin: 26px 0 0 0;
+  display: inline-block;
+}
+
+.vim-home-link {
+  color: white;
+  padding: 10px 20px;
+  background-color: black;
+  &:hover {
+   color: white;
+  } &:visited {
+    color: white;
+  }
+}
+
 .new-form {
   background-color: lightgrey; 
   border-radius: 6px;

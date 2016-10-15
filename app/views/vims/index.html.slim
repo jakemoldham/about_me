@@ -1,5 +1,7 @@
 .container
   h1 Vanilla Vim 
+  .vim-home
+    = link_to "Home", root_path, method: :get, class: "vim-home-link"
   hr
   - @vims.each do |vim|
     tr
@@ -11,12 +13,12 @@
       | Vim Command:
       .vim-code = vim.code
       hr
-      /*= link_to 'Show', vim*/
-      /*br*/
-      /*= link_to 'Edit', edit_vim_path(vim)*/
-      /*br*/
-      /*= link_to 'Destroy', vim, data: { confirm: 'Are you sure?' }, method: :delete*/
+      - if logged_in?(:admin)
+        = link_to 'Edit', edit_vim_path(vim)
+        br
+        = link_to 'Destroy', vim, data: { confirm: 'Are you sure?' }, method: :delete
 
   br
 
-  = link_to 'New Vim', new_vim_path
+  - if logged_in?(:admin)
+    = link_to 'New Vim', new_vim_path

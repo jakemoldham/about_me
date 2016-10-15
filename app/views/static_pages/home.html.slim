@@ -2,6 +2,11 @@
   = image_tag('logo-light.png', id: 'logoherostatic')
   #section1.section
     = image_tag('logo-light.png', class: 'logohero')
+    - if logged_in?(:admin)
+      #sign-out-div
+        = link_to('Sign Out', destroy_user_session_path, :method => :delete, id: 'sign-out')
+    #vim-link-home-div
+      = link_to "Vim", vims_path, method: :get, id: 'vim-link-home'
     = image_tag('dreaming.png', id: 'dreaming')
     p#herotext
       | FULL STACK RUBY DEVELOPER
@@ -69,9 +74,8 @@
               | SOURCE
     .col-md-3
   #section4.section
-    |  <div class="custom4"
+    |  <div class="custom4">
     = image_tag('logo-light.png', class: 'logohero')
-    | > 
     p#section4-p
       |  It's time we get to
       br
