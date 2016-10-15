@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  access all: :all
 
   def send_contact_mailer
   end

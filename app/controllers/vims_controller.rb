@@ -1,4 +1,5 @@
 class VimsController < ApplicationController
+  access all: [:index], admin: :all
   before_action :set_vim, only: [:show, :edit, :update, :destroy]
   layout "vim"
 
