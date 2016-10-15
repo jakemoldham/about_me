@@ -14,39 +14,29 @@
       |  CYCLING ENTHUSIAST
   #section2.section
     = image_tag('logo-dark.png', class: 'logohero')
-    .col-md-3
-    .col-md-6
+    .container
       #section2-content
         = image_tag('avatar.png')
         h3
           | Hello, I'm Jake Oldham.
-        p
-          | One of the first things you need to know about me is that I love VIM.
-          |  I have learned some devops skills that I really enjoy. 
-          | At 2am I hit a coding spot of perfection, 
-          | were good things tend to happen. Basicly I just love coding. 
-        .exerience
+        p I currently work at #{link_to 'NIKOLA MOTOR','https://nikolamotor.com', target: "_blank", id: "nikola-motor"}.
+          I have a love and passion for software development. I love learning, 
+          that love extends to problem solving and finding the right solution for each new challenge. 
+          I love creating things that inspire and help our experience on the web. 
+        .experience
+          h3
+            | MY FAVORITES: 
           p
-            | HTML 5
-          p.css3text
-            | CSS 3
-          .html5.expbar
-          .css3.expbar
-          .rubyrails.expbar
-          .javascriptjqy.expbar
-          p.rubyrailstext
-            | Ruby/Rails
-          p.javascriptjqytext
-            | Javascript/Jquery
+            | RUBY, RAILS, VIM, SLIM, JAVASCRIPT/JQUERY, CSS, HTML, BOOTSTRAP, DEVISE, 
+            | PERTERGATE, UBUNTU, PASSANGER, NGINX, DRY, GIT, TDD, CAPYBARA, POLTERGEIST,  
+            | MINITEST, MARIADB, MYSQL2, DIGITALOCEAN, HOVER. 
           a[href="assets/resume.pdf" download="JakeOldham.pdf"]
             button
               | RESUME
               = image_tag("ic-download.png", id: 'downloadicon')
-    .col-md-3
   #section3.section
     = image_tag('logo-light.png', class: 'logohero')
-    .col-md-3
-    .col-md-6
+    .container
       #section3-content
         = image_tag('agoge.png')
         h3
@@ -72,7 +62,6 @@
           a[href="https://github.com/jakemoldham/Capstone" target="blank"]
             button#sourcebtn
               | SOURCE
-    .col-md-3
   #section4.section
     |  <div class="custom4">
     = image_tag('logo-light.png', class: 'logohero')
@@ -81,8 +70,7 @@
       br
       |  know one another. 
   = image_tag('graystrip.png', id: 'graystrip')
-  .col-md-3.hide-sc4
-  .col-md-6
+  .container
     .contact_links
       a#email.contactxt[href="mailto:jakemoldham@gmail.com"]
         = image_tag("ic-email.png")
@@ -94,4 +82,3 @@
         = image_tag("ic-github.png")
         | jakemoldham
     = render partial: 'email_form'
-  .col-md-3

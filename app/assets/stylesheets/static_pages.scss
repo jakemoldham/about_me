@@ -118,12 +118,13 @@
 
 #section2-content {
   margin-left: 20%;
-  margin-top: 10%;
+  margin-top: 80px;
    h3 {
     color: black;
     font-size: 30px;
     font-family: 'QuadonMedium';
    } p {
+    width: 700px; 
     color: grey;
     font-size: 20px;
     font-family: 'Quadon';
@@ -149,10 +150,10 @@
    }
 }
 
-.exerience {
+.experience {
   width: 700px;
   height: 700px;
-  padding-top: 60px;
+  padding-top: 30px;
   margin-top: 30px;
   border: solid;
   border-right: none;
@@ -162,47 +163,14 @@
   border-width: thin;
 }
 
-.expbar {
-  background-color: rgb(229, 229, 37);
-  width: 300px;
-  height: 13px;
-}
-
-.html5 {
-  margin: 20px 20px 20px 0px;
-
-}
-
-.css3text {
-  margin-left: 320px;
-  margin-top: -37px;
-}
-
-.css3 {
-  margin: -33px 0px 20px 320px;
-}
-
-.rubyrails {
-  margin: 60px 20px 0px 0px;
-}
-
-.rubyrailstext {
-  margin-top: -55px;
-}
-
-.javascriptjqy {
-  margin: -13px 0px 0px 320px;
-}
-
-.javascriptjqytext {
-  margin-left: 320px;
-  margin-top: -38px;
+#nikola-motor {
+  color: #4d4d4d;
 }
 
 // Section 3 content
 
 #section3-content {
-  margin-top: 110px;
+  margin-top: 80px;
   margin-left: 20%;
   height: 600px;
   width: 700px;
