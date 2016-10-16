@@ -38,30 +38,22 @@
     = image_tag('logo-light.png', class: 'logohero')
     .container
       #section3-content
-        = image_tag('agoge.png')
-        h3
-          | My DevPoint Capstone
-        p
-          | Working as a team of 3, I was able to assist in building a website where
-          br
-          |  users could sign up, pay for, and enroll in Saturday afternoon coding
-          br
-          |  classes. Here I was able to demonstrate my knowledge of Ruby on Rails,
-          br
-          |  JQuery, HTML5 and CSS3.
-        = image_tag('stripe.png', id: 'stripelogo')
-        = image_tag('paperclip.png', id: 'papercliplogo')
-        = image_tag('devise.png', id: 'deviselogo')
-        = image_tag('postgress.png', id: 'postgresslogo')
-        = image_tag('onmiauth.png', id: 'onmiauthlogo')
-        = image_tag('bootstrap.png', id: 'bootstraplogo')
-        #section3-buttons
-          a[href="http://www.agoge.club" target="blank"]
-            button#livebtn
-              | LIVE
-          a[href="https://github.com/jakemoldham/Capstone" target="blank"]
-            button#sourcebtn
-              | SOURCE
+        h3 Projects:
+        = link_to "https://www.agoge.club", target: "_blank" do
+          = image_tag('agogelogo.png', id: "agogelogo")
+        = link_to "https://ringseven.com", target: "_blank" do
+          = image_tag('r7_logo.png', id: "r7_logo")
+        = link_to "https://village.ringseven.com", target: "_blank" do
+          = image_tag('village-logo.png', id: "village-logo")
+        = link_to "https://cappahealth.com", target: "_blank" do
+          = image_tag('cappa-logo-color.png', id: "cappahealth")
+        = link_to "https://apex.ringseven.com", target: "_blank" do
+          = image_tag('apex-logo.png', id: "apex-logo")
+        = link_to "https://medforums.com", target: "_blank" do
+          raw = image_tag('med-forums-logo.svg', id: "med-forums-logo")
+        = link_to "https://nikolamotor.com", target: "_blank" do
+          = image_tag('nikola_motor_logo.png', id: "nikola_motor_logo")
+        h1#linxware data-toggle="tooltip" data-placement="top" title="Linxware is custom software that can be installed on your Workfront account. It will automatically sync all projects, tasks and time back and forth with Jira, or many other task managment systems." LINXWARE
   #section4.section
     |  <div class="custom4">
     = image_tag('logo-light.png', class: 'logohero')
@@ -82,3 +74,7 @@
         = image_tag("ic-github.png")
         | jakemoldham
     = render partial: 'email_form'
+javascript:
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

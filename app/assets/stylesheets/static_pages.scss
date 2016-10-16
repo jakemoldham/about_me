@@ -174,61 +174,20 @@
   margin-left: 20%;
   height: 600px;
   width: 700px;
-   h3 {
-    font-size: 22px;
-    font-family: 'Quadon';
-    color: white;
-   } p {
-    color: grey;
-    width: 530px;
-    font-size: 16px;
-    font-family: 'ProximaNova';
-   } #stripelogo {
-    margin-top: -195px; 
-    margin-left: 520px;
-    opacity: .2;
-   } #papercliplogo {
-    margin-top: -195px;
-    margin-left: 15px;
-    opacity: .2;
-   } #deviselogo {
-    margin-top: -195px;
-    margin-left: 15px;
-    opacity: .2;
-   } #postgresslogo {
-    margin-top: -110px;
-    margin-left: -155px;
-    opacity: .2;
-   } #onmiauthlogo {
-    margin-top: -115px;
-    margin-left: 12px;
-    opacity: .2;
-   } #bootstraplogo {
-    margin-top: -110px;
-    margin-left: 15px;
-    opacity: .2;
-   }
-}
-
-#section3-buttons {
-   #livebtn, #sourcebtn {
-    position: absolute;
-    color: lightgrey;
-    font-size: 16px;
-    border: none; 
-    background-color: grey;
-    font-family: 'ProximaNova';
-    font-weight: 2;
-    letter-spacing: 1px;
-   } #livebtn {
-    padding: 10px 55px;
-   } #sourcebtn {
-    margin-left: 155px;
-    padding: 10px 45px;
-   } #livebtn:hover, #sourcebtn:hover {
-    color: yellow;
-    background-color: black;
-   }
+  color: white;
+ #agogelogo, #med-forums-logo, #r7_logo, #apex-logo, #cappahealth, #village-logo {
+   padding: 10px 20px;
+ } #r7_logo {
+ } #med-forums-logo, #cappahealth {
+   width: 312px;
+ } #nikola_motor_logo {
+   padding: 0;
+   width: 380px;
+ } #cappahealth, #apex-logo {
+   margin-top: 20px;
+ } #linxware {
+   padding: 0 23px;
+ }
 }
 
 // Section 4 content
