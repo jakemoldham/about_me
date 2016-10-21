@@ -15,45 +15,47 @@
   #section2.section
     = image_tag('logo-dark.png', class: 'logohero')
     .container
-      #section2-content
-        = image_tag('avatar.png')
-        h3
-          | Hello, I'm Jake Oldham.
-        p I currently work at #{link_to 'NIKOLA MOTOR','https://nikolamotor.com', target: "_blank", id: "nikola-motor"}.
-          I have a love and passion for software development. I love learning, 
-          that love extends to problem solving and finding the right solution for each new challenge. 
-          I love creating things that inspire and help our experience on the web. 
-        .experience
+      .col-md-8.col-md-offset-2
+        #section2-content
+          = image_tag('avatar.png')
           h3
-            | MY FAVORITES: 
-          p
-            | RUBY, RAILS, VIM, SLIM, JAVASCRIPT/JQUERY, CSS, HTML, BOOTSTRAP, DEVISE, 
-            | PERTERGATE, UBUNTU, PASSANGER, NGINX, DRY, GIT, TDD, CAPYBARA, POLTERGEIST,  
-            | MINITEST, MARIADB, MYSQL2, DIGITALOCEAN, HOVER. 
-          a[href="assets/resume.pdf" download="JakeOldham.pdf"]
-            button
-              | RESUME
-              = image_tag("ic-download.png", id: 'downloadicon')
+            | Hello, I'm Jake Oldham.
+          p I currently work at #{link_to 'NIKOLA MOTOR','https://nikolamotor.com', target: "_blank", id: "nikola-motor"}.
+            I have a love and passion for software development. I love learning, 
+            that love extends to problem solving and finding the right solution for each new challenge. 
+            I love creating things that inspire and help our experience on the web. 
+          .experience
+            h3
+              | MY FAVORITES: 
+            p
+              | RUBY, RAILS, VIM, SLIM, JAVASCRIPT/JQUERY, CSS, HTML, BOOTSTRAP, DEVISE, 
+              | PERTERGATE, UBUNTU, PASSANGER, NGINX, DRY, GIT, TDD, CAPYBARA, POLTERGEIST,  
+              | MINITEST, MARIADB, MYSQL2, DIGITALOCEAN, HOVER. 
+            a[href="assets/resume.pdf" download="JakeOldham.pdf"]
+              button
+                | RESUME
+                = image_tag("ic-download.png", id: 'downloadicon')
   #section3.section
     = image_tag('logo-light.png', class: 'logohero')
     .container
-      #section3-content
-        h3 Projects:
-        = link_to "https://www.agoge.club", target: "_blank" do
-          = image_tag('agogelogo.png', id: "agogelogo")
-        = link_to "https://ringseven.com", target: "_blank" do
-          = image_tag('r7_logo.png', id: "r7_logo")
-        = link_to "https://village.ringseven.com", target: "_blank" do
-          = image_tag('village-logo.png', id: "village-logo")
-        = link_to "https://cappahealth.com", target: "_blank" do
-          = image_tag('cappa-logo-color.png', id: "cappahealth")
-        = link_to "https://apex.ringseven.com", target: "_blank" do
-          = image_tag('apex-logo.png', id: "apex-logo")
-        = link_to "https://medforums.com", target: "_blank" do
-          raw = image_tag('med-forums-logo.svg', id: "med-forums-logo")
-        = link_to "https://nikolamotor.com", target: "_blank" do
-          = image_tag('nikola_motor_logo.png', id: "nikola_motor_logo")
-        h1#linxware data-toggle="tooltip" data-placement="top" title="Linxware is custom software that can be installed on your Workfront account. It will automatically sync all projects, tasks and time back and forth with Jira, or many other task managment systems." LINXWARE
+      .col-md-8.col-md-offset-2
+        #section3-content
+          h3 Projects:
+          = link_to "https://www.agoge.club", target: "_blank" do
+            = image_tag('agogelogo.png', id: "agogelogo")
+          = link_to "https://ringseven.com", target: "_blank" do
+            = image_tag('r7_logo.png', id: "r7_logo")
+          = link_to "https://village.ringseven.com", target: "_blank" do
+            = image_tag('village-logo.png', id: "village-logo")
+          = link_to "https://cappahealth.com", target: "_blank" do
+            = image_tag('cappa-logo-color.png', id: "cappahealth")
+          = link_to "https://apex.ringseven.com", target: "_blank" do
+            = image_tag('apex-logo.png', id: "apex-logo")
+          = link_to "https://medforums.com", target: "_blank" do
+            raw = image_tag('med-forums-logo.svg', id: "med-forums-logo")
+          = link_to "https://nikolamotor.com", target: "_blank" do
+            = image_tag('nikola_motor_logo.png', id: "nikola_motor_logo")
+          h1#linxware data-toggle="tooltip" data-placement="top" title="Linxware is custom software that can be installed on your Workfront account. It will automatically sync all projects, tasks and time back and forth with Jira, or many other task managment systems." LINXWARE
   #section4.section
     |  <div class="custom4">
     = image_tag('logo-light.png', class: 'logohero')
@@ -61,19 +63,20 @@
       |  It's time we get to
       br
       |  know one another. 
-  = image_tag('graystrip.png', id: 'graystrip')
-  .container
     .contact_links
-      a#email.contactxt[href="mailto:jakemoldham@gmail.com"]
-        = image_tag("ic-email.png")
-        | jakemoldham@gmail.com
-      #cell.contactxt
-        = image_tag("ic-cell.png")
-        | 385-329-2770
-      a#github.contactxt[href="https://github.com/jakemoldham" target="blank"]
-        = image_tag("ic-github.png")
-        | jakemoldham
-    = render partial: 'email_form'
+      .container
+        .col-md-12.col-md-offset-2
+          a.contactxt[href="mailto:jakemoldham@gmail.com"]
+            = image_tag("ic-email.png")
+            | jakemoldham@gmail.com
+          .contactxt
+            = image_tag("ic-cell.png")
+            | 385-329-2770
+          a.contactxt[href="https://github.com/jakemoldham" target="blank"]
+            = image_tag("ic-github.png")
+            | jakemoldham
+    .container
+      = render partial: 'email_form'
 javascript:
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()

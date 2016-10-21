@@ -1,9 +1,10 @@
 = form_for @contact, url: contact_path do |f|
-  .name
-    = f.text_field :name, placeholder: 'Name', class: 'form_area'
-  .email
-    = f.text_field :email, :maxlength => 32, placeholder: 'Email', class: 'form_area'
-  .message
-    = f.text_area :message, placeholder: 'Write your message here', class: 'form_message_area'
-  .submit
-    = f.submit "SUBMIT", class: 'form_submit'
+  .col-md-12.col-md-offset-2
+    .name
+      = f.text_field :name, placeholder: 'Name', class: 'form_area'
+    .email
+      = f.text_field :email, :maxlength => 32, placeholder: 'Email', class: 'form_area'
+    .message
+      = f.text_area :message, placeholder: 'Write your message here', class: 'form_message_area'
+    .submit
+      = f.submit "SUBMIT", class: 'form_submit'
