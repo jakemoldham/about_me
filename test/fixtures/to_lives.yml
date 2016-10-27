@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: MyString
+  stage: 1
+  wins: 1
+
+two:
+  player: MyString
+  stage: 1
+  wins: 1
