@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :to_live_questions
+
   resources :to_lives
 
   root 'static_pages#home'

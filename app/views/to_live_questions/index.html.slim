@@ -1,0 +1,25 @@
+h1 Listing to_live_questions
+
+table
+  thead
+    tr
+      th Title
+      th Body
+      th Answer
+      th
+      th
+      th
+
+  tbody
+    - @to_live_questions.each do |to_live_question|
+      tr
+        td = to_live_question.title
+        td = to_live_question.body
+        td = to_live_question.answer
+        td = link_to 'Show', to_live_question
+        td = link_to 'Edit', edit_to_live_question_path(to_live_question)
+        td = link_to 'Destroy', to_live_question, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New To live question', new_to_live_question_path
