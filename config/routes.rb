@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :to_lives
+
   root 'static_pages#home'
 
   # For redirect to work must be before devise_for :users.

@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Player:
+  = @to_life.player
+p
+  strong Stage:
+  = @to_life.stage
+p
+  strong Wins:
+  = @to_life.wins
+
+= link_to 'Edit', edit_to_life_path(@to_life)
+'|
+= link_to 'Back', to_lives_path
