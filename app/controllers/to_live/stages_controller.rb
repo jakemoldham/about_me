@@ -1,7 +1,7 @@
 class ToLive::StagesController < ApplicationController
   before_action :set_to_live_stage, only: [:show, :edit, :update, :destroy]
   # access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
-  access all: [:index], admin: :all
+  access all: [:index, :lives, :game], admin: :all
   layout'vim'
 
   # GET /to_live/stages
