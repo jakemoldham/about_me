@@ -19,7 +19,7 @@ class ToLive::StagesController < ApplicationController
 
   # GET /to_live/lives
   def lives
-    session[:stages] += 1
+    session[:stages] += 1 || session[:stages] = 1
     @stage = ToLive::Stage.set_stage(session[:stages])
     session[:arr] = ToLive::Stage.rand_questions if params[:stage] == "one" 
     if session[:arr].empty?
