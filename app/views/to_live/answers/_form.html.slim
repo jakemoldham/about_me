@@ -1,0 +1,21 @@
+= form_for @to_live_answer do |f|
+  - if @to_live_answer.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@to_live_answer.errors.count, "error")} prohibited this to_live_answer from being saved:"
+      ul
+        - @to_live_answer.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :question
+    = f.text_field :question
+  .field
+    = f.label :answer
+    = f.text_field :answer
+  .field
+    = f.label :choose
+    = f.text_field :choose
+  .field
+    = f.label :correct
+    = f.text_field :correct
+  .actions = f.submit

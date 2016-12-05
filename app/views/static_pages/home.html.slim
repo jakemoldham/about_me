@@ -5,8 +5,21 @@
     - if logged_in?(:admin)
       #sign-out-div
         = link_to('Sign Out', destroy_user_session_path, :method => :delete, id: 'sign-out')
-    #vim-link-home-div
-      = link_to "Vim", vims_path, method: :get, id: 'vim-link-home'
+    #tutorial-dropdown-div
+      .dropdown
+        button#dropdownMenu1.btn.btn-tutorial.dropdown-toggle[type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"]
+          | Tutorials
+          span.caret
+        ul.dropdown-menu[aria-labelledby="dropdownMenu1"]
+          li
+            .dropdown-header Tutorials
+          li
+            = link_to "Vim", vims_path, method: :get, id: 'vim-link-home'
+          li
+            .dropdown-header Games
+          //li.divider[role="separator"]
+          li
+            = link_to "How To Live", to_live_stages_path, method: :get, id: 'vim-link-home'
     = image_tag('dreaming.png', id: 'dreaming')
     p#herotext
       | FULL STACK RUBY DEVELOPER

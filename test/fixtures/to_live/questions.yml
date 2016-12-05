@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stage_id: 
+  title: MyString
+  body: MyString
+  answer: false
+  true_false: false
+
+two:
+  stage_id: 
+  title: MyString
+  body: MyString
+  answer: false
+  true_false: false

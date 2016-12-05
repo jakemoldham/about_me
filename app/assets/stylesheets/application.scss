@@ -2,10 +2,15 @@
 @import "bootstrap";
 @import "static_pages";
 @import "vims";
+@import "to_live/stages";
 
 @font-face {
   font-family: 'ProximaNova';    
    src:font-url('ProximaNova/Proxima-Nova-Regular.otf');
+}
+@font-face {
+  font-family: 'ProximaNovaBold';    
+   src:font-url('ProximaNova/Proxima-Nova-Bold.otf');
 }
 @font-face {
   font-family: 'Quadon';    
@@ -14,6 +19,10 @@
 @font-face {
   font-family: 'QuadonMedium';    
    src:font-url('Quadon/Quadon-Medium.otf');
+}
+@font-face {
+  font-family: 'Super';    
+   src:font-url('Supernettcn/Supernettcn-Condensed.otf');
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 

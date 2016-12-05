@@ -1,0 +1,4 @@
+ToLive
+rails g scaffold ToLive/Stage title description
+rails g scaffold ToLive/Question stage:belongs_to title body answer:boolean true_false:boolean
+rails g model ToLive/Player name:string wins:integer 

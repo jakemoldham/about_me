@@ -1,0 +1,23 @@
+h1 Listing to_live_players
+
+table
+  thead
+    tr
+      th Name
+      th Wins
+      th
+      th
+      th
+
+  tbody
+    - @to_live_players.each do |to_live_player|
+      tr
+        td = to_live_player.name
+        td = to_live_player.wins
+        td = link_to 'Show', to_live_player
+        td = link_to 'Edit', edit_to_live_player_path(to_live_player)
+        td = link_to 'Destroy', to_live_player, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Player', new_to_live_player_path

@@ -1,0 +1,27 @@
+h1 Listing to_live_answers
+
+table
+  thead
+    tr
+      th Question
+      th Answer
+      th Choose
+      th Correct
+      th
+      th
+      th
+
+  tbody
+    - @to_live_answers.each do |to_live_answer|
+      tr
+        td = to_live_answer.question
+        td = to_live_answer.answer
+        td = to_live_answer.choose
+        td = to_live_answer.correct
+        td = link_to 'Show', to_live_answer
+        td = link_to 'Edit', edit_to_live_answer_path(to_live_answer)
+        td = link_to 'Destroy', to_live_answer, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Answer', new_to_live_answer_path

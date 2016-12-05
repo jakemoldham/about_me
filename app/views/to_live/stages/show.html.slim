@@ -1,0 +1,17 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @to_live_stage.title
+p
+  strong Description:
+  = @to_live_stage.description
+
+= link_to 'Edit', edit_to_live_stage_path(@to_live_stage)
+'|
+= link_to 'Back', to_live_stages_path
+
+
+- if logged_in?(:admin)
+  hr
+  = link_to 'New Stage', new_to_live_stage_path

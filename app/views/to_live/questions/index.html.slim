@@ -1,0 +1,16 @@
+.container
+  h1 How To Live Questions
+  .vim-home
+  hr
+  - @to_live_questions.each do |to_live_question|
+    tr
+      .vim-desc = to_live_question.title
+      .vim-desc = to_live_question.body
+      br
+      td = link_to 'Show | ', to_live_question
+      td = link_to 'Edit | ', edit_to_live_question_path(to_live_question)
+      td = link_to 'Destroy', to_live_question, data: { confirm: 'Are you sure?' }, method: :delete
+
+  br
+
+  = link_to 'New Question', new_to_live_question_path

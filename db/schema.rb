@@ -11,22 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027165753) do
+ActiveRecord::Schema.define(version: 20161129052309) do
 
-  create_table "to_live_questions", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.string   "body",       limit: 255
-    t.boolean  "answer",     limit: 1
+  create_table "to_live_answers", force: :cascade do |t|
+    t.integer  "question_id", limit: 4
+    t.string   "answer",      limit: 255
+    t.boolean  "choose",      limit: 1
+    t.boolean  "correct",     limit: 1
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "to_live_answers", ["question_id"], name: "index_to_live_answers_on_question_id", using: :btree
+
+  create_table "to_live_players", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "wins",       limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
-  create_table "to_lives", force: :cascade do |t|
-    t.string   "player",     limit: 255
-    t.integer  "stage",      limit: 4
-    t.integer  "wins",       limit: 4
+  create_table "to_live_questions", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "body",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "to_live_stages", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.string   "description", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,4 +72,5 @@ ActiveRecord::Schema.define(version: 20161027165753) do
     t.datetime "updated_at",                null: false
   end
 
+  add_foreign_key "to_live_answers", "to_live_questions", column: "question_id"
 end

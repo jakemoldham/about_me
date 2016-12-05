@@ -1,0 +1,46 @@
+.lives-bkg
+  p.your-turn
+    |YOUR TURN
+  p.live-player-name
+    = @player.name
+    br
+    = image_tag('underline.png', class: "live-underline")
+  p.stage-title
+    = @stage.title
+  p.question-title = @question.title.upcase
+  - @question.answers.each do |answers| 
+    .row
+      .btn-question-div
+        button.btn.live-question-btn[type="button" data-toggle="modal" data-target="#questionModal" data-correct="#{answers.correct}"]
+          = "#{answers.answer}"
+
+  #questionModal.modal.fade[tabindex="-1" role="dialog" aria-labelledby="questionModalLabel"]
+    .modal-dialog.modal-sm[role="document"]
+      .modal-content
+        .modal-body
+          .lives-pic
+          .lives-text
+          .lives-player
+          .send-them
+
+javascript:
+  $('#questionModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var correct = button.data('correct')
+    var modal = $(this)
+    if (correct === true) {
+      $('.lives-pic').html('<img src="/assets/thumbsup.png" alt="You Win">');
+      modal.find('.lives-text').text('RIGHT ANSWER!');
+      $('.send-them').html('<a class="btn win-btn" type="button" href="/to_live/lives">NEXT</a>');
+      $('.modal-body').addClass("win-bottom"); 
+      modal.find('.lives-player').hide();
+      } else {
+      modal.find('.modal-title').text('You Lose');
+      $('.lives-pic').html('<img src="/assets/thumbsdown.png" alt="You Lose">');
+      modal.find('.lives-text').text('WRONG ANSWER');
+      $('.send-them').html('<a class="btn lose-btn" type="button" href="/to_live/game">Start Over</a>');
+      $('.modal-body').addClass("lose-bottom"); 
+      modal.find('.lives-player').text("#{@win_player.name} WINS!");
+      $('.lives-player').addClass("lives-player-bkg"); 
+    }
+  })
