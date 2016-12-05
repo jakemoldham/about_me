@@ -1,0 +1,12 @@
+.container
+  h1 Editing Stage
+
+  == render 'form'
+
+  = link_to 'Show', @to_live_stage
+  '|
+  = link_to 'Back', to_live_stages_path
+  hr
+  | Add 
+  = link_to 'New Question ', new_to_live_question_path(stage_id: @to_live_stage.id)
+  | to current Stage

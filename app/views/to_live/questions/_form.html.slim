@@ -1,0 +1,29 @@
+= form_for @to_live_question do |f|
+  - if @to_live_question.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@to_live_question.errors.count, "error")} prohibited this to_live_question from being saved:"
+      ul
+        - @to_live_question.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    .col-md-12
+      = f.label :title
+    .col-md-12
+      = f.text_field :title
+  - 3.times do 
+    = f.fields_for :answers do |ff|
+      .field
+        .col-md-12
+          = ff.label :answer
+        .col-md-12
+          = ff.text_field :answer
+      .field
+        .col-md-12
+          = ff.label :correct
+        .col-md-12
+          = ff.check_box :correct
+
+  br
+  .col-md-12
+    .actions.vim-submit = f.submit

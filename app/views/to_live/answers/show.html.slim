@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Question:
+  = @to_live_answer.question
+p
+  strong Answer:
+  = @to_live_answer.answer
+p
+  strong Choose:
+  = @to_live_answer.choose
+p
+  strong Correct:
+  = @to_live_answer.correct
+
+= link_to 'Edit', edit_to_live_answer_path(@to_live_answer)
+'|
+= link_to 'Back', to_live_answers_path

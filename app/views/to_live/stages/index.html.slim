@@ -1,0 +1,23 @@
+.to-live-background
+  .container
+    .vim-home
+      = link_to "Home", root_path, method: :get, class: "vim-home-link"
+    .row
+      .col-md-6.col-md-offset-3
+        = image_tag('howtolivelogo.png', class: "live-logo")
+        = image_tag('therules.png')
+    = form_for to_live_stages_path, method: :get do |f|
+      .row
+        .col-md-7.col-md-offset-3.live-contain-player
+          .live-players-div
+            = text_field_tag("new_players[]", "Enter Player 1", class: "live-players")
+          .live-vs-div
+            |VS
+          .live-players-div
+            = text_field_tag("new_players[]", "Enter Player 2", class: "live-players")
+      .row
+        .col-md-6.col-md-offset-5
+          = f.submit "Let's Play!", class: "lets-play"
+    br
+    - if logged_in?(:admin)
+      = link_to 'New Question', new_to_live_question_path

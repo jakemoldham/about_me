@@ -1,0 +1,2 @@
+module ToLive::QuestionsHelper
+end

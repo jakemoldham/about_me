@@ -1,0 +1,21 @@
+= form_for @to_live_stage do |f|
+  - if @to_live_stage.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@to_live_stage.errors.count, "error")} prohibited this to_live_stage from being saved:"
+      ul
+        - @to_live_stage.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    .col-md-12
+      = f.label :title
+    .col-md-12
+      = f.text_field :title, class: "vim-text-field"
+  .field
+    .col-md-12
+      = f.label :description
+    .col-md-12
+      = f.text_field :description, class: "vim-text-field"
+  br
+  .col-md-12
+    .actions.vim-submit = f.submit

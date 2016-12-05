@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :to_live_questions
-
-  resources :to_lives
-
   root 'static_pages#home'
 
   # For redirect to work must be before devise_for :users.
@@ -21,4 +17,12 @@ Rails.application.routes.draw do
 
   resources :vims
 
+  namespace :to_live do
+    resources :questions
+    resources :stages
+    resources :answers
+    resources :players
+    get '/lives', to: 'stages#lives', as: :lives
+    get '/game', to: 'stages#game', as: :game
+  end
 end

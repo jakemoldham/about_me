@@ -82,17 +82,33 @@
   }
 }
 
-#vim-link-home-div {
+#tutorial-dropdown-div {
   float: right;
   margin: 25px 30px;
 }
 
-#vim-link-home {
-  padding: 10px 20px;
-  color: lightgrey;
-  font-size: 2em;
-  #vim-link-home:hover {
+.btn-tutorial {
+  background-color: #000;
+  color: #fff;
+  &:hover {
     color: yellow;
+  } &:visited {
+    color: #fff;
+  } &:focus {
+    color: yellow;
+  }
+}
+
+.dropdown-menu {
+  background-color: #000;
+  left: -72px;
+}
+
+#vim-link-home {
+  color: lightgrey;
+  background-color: black;
+  &:hover {
+    color: yellow !important;
   } &:visited {
     color: lightgrey;
   }
