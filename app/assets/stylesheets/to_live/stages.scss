@@ -145,3 +145,21 @@
   padding: 9px;
   margin-left: 10px;
 }
+
+.win-image {
+  height: 220px;
+  margin-left: 14%;
+  background-repeat: no-repeat;
+  background-image: image-url("/assets/thumbsup.png");
+}
+
+.lose-image {
+  height: 220px;
+  margin-left: 14%;
+  background-repeat: no-repeat;
+  background-image: image-url("/assets/thumbsdown.png");
+}
+
+.modal-width {
+  max-width: 300px;
+}
