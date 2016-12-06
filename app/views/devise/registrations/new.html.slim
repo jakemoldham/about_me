@@ -1,7 +1,7 @@
 .container
   .col-md-3.col-md-offset-4.sign-in-font
     .sign-up-logo-div
-      = image_tag('/assets/logo-dark.png', class: "sign-up-logo")
+      = image_tag('logo-dark.png', class: "sign-up-logo")
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = devise_error_messages!
       .field
