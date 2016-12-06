@@ -1,7 +1,7 @@
 class ToLive::StagesController < ApplicationController
   before_action :set_to_live_stage, only: [:show, :edit, :update, :destroy]
   # access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
-  access all: [:index, :lives, :game], admin: :all
+  access all: [:index], user: [:lives, :game], admin: :all
   layout'vim'
 
   # GET /to_live/stages
@@ -19,7 +19,11 @@ class ToLive::StagesController < ApplicationController
 
   # GET /to_live/lives
   def lives
-    session[:stages] += 1 || session[:stages] = 1
+    if session[:stages].nil?
+      session[:stages] = 1 
+    else
+      session[:stages] += 1 
+    end
     @stage = ToLive::Stage.set_stage(session[:stages])
     session[:arr] = ToLive::Stage.rand_questions if params[:stage] == "one" 
     if session[:arr].empty?
