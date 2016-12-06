@@ -1,19 +1,17 @@
 .container
-  .col-md-6.col-md-offset-5
-    h2
-      | Log in
+  .col-md-3.col-md-offset-4.sign-in-font
+    .sign-up-logo-div
+      = image_tag('/assets/logo-dark.png', class: "sign-up-logo")
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field
-        = f.label :email
-        br
-        = f.email_field :email, autofocus: true
+        = f.email_field :email, autofocus: true, placeholder: "EMAIL", class: "sign-up-password"
       .field
-        = f.label :password
-        br
-        = f.password_field :password, autocomplete: "off"
+        = f.password_field :password, autocomplete: "off", placeholder: "PASSWORD", class: "sign-up-password"
       - if devise_mapping.rememberable?
         .field
           = f.check_box :remember_me
+          |  
           = f.label :remember_me
-      .actions
-        = f.submit "Log in"
+      = f.submit "Log in", class: "btn sign-up-btn"
+    = render "devise/shared/links"
+

@@ -1,8 +1,10 @@
-h1 Editing to_live_question
-
-== render 'form'
-
-= link_to 'Show', @to_live_question
-'|
-= link_to 'Back', to_live_questions_path
+.container
+  h1 Editing Question
+  hr
+  .col-md-12
+    = link_to 'Show', @to_live_question
+    '|
+    = link_to 'Back', to_live_questions_path
+  .col-md-6.new-form
+    = render 'edit_form'
 

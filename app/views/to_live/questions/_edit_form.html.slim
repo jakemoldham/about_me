@@ -12,19 +12,19 @@
     .col-md-12
       = f.text_field :title, class: "questions-input"
       hr
-  - 3.times do 
-    = f.fields_for :answers do |ff|
-      .field
-        .col-md-12
-          = ff.label :answer
-        .col-md-12
-          = ff.text_field :answer, class: "questions-input"
-      .field
-        .col-md-12
-          = ff.label "Choose if correct answer:"
-          |  
-          = ff.check_box :correct, class: "questions-input"
-          hr
+  = f.fields_for :answers do |ff|
+    = hidden_field "question[answer_attributes][id]", @to_live_question.id
+    .field
+      .col-md-12
+        = ff.label :answer
+      .col-md-12
+        = ff.text_field :answer, class: "questions-input"
+    .field
+      .col-md-12
+        = ff.label "Choose if correct answer:"
+        |  
+        = ff.check_box :correct, class: "questions-input"
+        hr
 
   br
   .col-md-12

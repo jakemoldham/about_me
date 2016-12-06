@@ -1,6 +1,7 @@
 class ToLive::QuestionsController < ApplicationController
   before_action :set_to_live_question, only: [:show, :edit, :update, :destroy]
-  access admin: :all
+  access admin: :all, editor: :all
+  layout 'vim'
 
   # GET /to_live/questions
   def index
@@ -27,7 +28,7 @@ class ToLive::QuestionsController < ApplicationController
     @to_live_question = ToLive::Question.new(to_live_question_params)
 
     if @to_live_question.save
-      redirect_to @to_live_question, notice: 'Question was successfully created.'
+      redirect_to to_live_questions_path, notice: 'Question was successfully created.'
     else
       render :new
     end
@@ -36,7 +37,7 @@ class ToLive::QuestionsController < ApplicationController
   # PATCH/PUT /to_live/questions/1
   def update
     if @to_live_question.update(to_live_question_params)
-      redirect_to @to_live_question, notice: 'Question was successfully updated.'
+      redirect_to to_live_questions_path, notice: 'Question was successfully updated.'
     else
       render :edit
     end
@@ -56,6 +57,6 @@ class ToLive::QuestionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def to_live_question_params
-      params.require(:to_live_question).permit(:title, :body, answers_attributes: [:answer, :choose, :correct])
+      params.require(:to_live_question).permit(:title, :body, answers_attributes: [:id, :answer, :choose, :correct])
     end
 end

@@ -1,6 +1,7 @@
 class ToLive::AnswersController < ApplicationController
   before_action :set_to_live_answer, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access admin: :all
+  layout 'vim'
 
   # GET /to_live/answers
   def index

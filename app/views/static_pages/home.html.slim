@@ -2,7 +2,7 @@
   = image_tag('logo-light.png', id: 'logoherostatic')
   #section1.section
     = image_tag('logo-light.png', class: 'logohero')
-    - if logged_in?(:admin)
+    - if logged_in?(:admin) || logged_in?(:user) || logged_in?(:editor)
       #sign-out-div
         = link_to('Sign Out', destroy_user_session_path, :method => :delete, id: 'sign-out')
     #tutorial-dropdown-div

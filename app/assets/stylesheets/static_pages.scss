@@ -310,3 +310,32 @@
 .resume {
   background-image: image-url('resume.pdf');
 }
+
+// SIGN UP
+
+.sign-up-logo-div {
+  margin-top: 35%;
+  .sign-up-logo {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.sign-in-font{
+  font-family: 'ProximaNova'
+}
+
+.sign-up-password {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.sign-up-btn {
+  width: 100%;
+  color: yellow;
+  background-color: #000;
+  &:hover {
+    color: #000;
+    background-color: yellow;
+  }
+}

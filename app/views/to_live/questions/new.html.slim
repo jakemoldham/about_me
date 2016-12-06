@@ -1,7 +1,7 @@
 .container
   h1 New Question
   hr
+  .col-md-12
+    = link_to 'Back', to_live_questions_path, class: "btn btn-primary to-live-question-new"
   .col-md-6.new-form
     = render 'form'
-  .col-md-12
-    = link_to 'Back', to_live_questions_path

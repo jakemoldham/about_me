@@ -1,6 +1,7 @@
 class ToLive::PlayersController < ApplicationController
   before_action :set_to_live_player, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access admin: :all
+  layout 'vim'
 
   # GET /to_live/players
   def index

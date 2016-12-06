@@ -19,5 +19,5 @@
         .col-md-6.col-md-offset-5
           = f.submit "Let's Play!", class: "lets-play"
     br
-    - if logged_in?(:admin)
+    - if logged_in?(:admin) || logged_in?(:editor)
       = link_to 'New Question', new_to_live_question_path
