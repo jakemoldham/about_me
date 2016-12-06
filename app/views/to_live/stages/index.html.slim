@@ -10,11 +10,11 @@
       .row
         .col-md-7.col-md-offset-3.live-contain-player
           .live-players-div
-            = text_field_tag("new_players[]", "Enter Player 1", class: "live-players")
+            = text_field_tag("new_players[]", "", class: "live-players", placeholder: "Enter Player 1")
           .live-vs-div
             |VS
           .live-players-div
-            = text_field_tag("new_players[]", "Enter Player 2", class: "live-players")
+            = text_field_tag("new_players[]", "" , class: "live-players", placeholder: "Enter Player 2")
       .row
         .col-md-6.col-md-offset-5
           = f.submit "Let's Play!", class: "lets-play"
