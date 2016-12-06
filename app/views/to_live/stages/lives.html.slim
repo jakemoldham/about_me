@@ -29,18 +29,18 @@ javascript:
     var correct = button.data('correct')
     var modal = $(this)
     if (correct === true) {
-      $('.lives-pic').html('<img src="/assets/thumbsup.png" alt="You Win">');
+      modal.find('.lives-pic').html('<img src="/assets/thumbsup.png" alt="You Win">');
       modal.find('.lives-text').text('RIGHT ANSWER!');
-      $('.send-them').html('<a class="btn win-btn" type="button" href="/to_live/lives">NEXT</a>');
-      $('.modal-body').addClass("win-bottom"); 
+      modal.find('.send-them').html('<a class="btn win-btn" type="button" href="/to_live/lives">NEXT</a>');
+      modal.find('.modal-body').addClass("win-bottom"); 
       modal.find('.lives-player').hide();
       } else {
       modal.find('.modal-title').text('You Lose');
-      $('.lives-pic').html('<img src="/assets/thumbsdown.png" alt="You Lose">');
+      modal.find('.lives-pic').html('<img src="/assets/thumbsdown.png" alt="You Lose">');
       modal.find('.lives-text').text('WRONG ANSWER');
-      $('.send-them').html('<a class="btn lose-btn" type="button" href="/to_live/game">Start Over</a>');
-      $('.modal-body').addClass("lose-bottom"); 
+      modal.find('.send-them').html('<a class="btn lose-btn" type="button" href="/to_live/game">Start Over</a>');
+      modal.find('.modal-body').addClass("lose-bottom"); 
       modal.find('.lives-player').text("#{@win_player.name} WINS!");
-      $('.lives-player').addClass("lives-player-bkg"); 
+      modal.find('.lives-player').addClass("lives-player-bkg"); 
     }
   })
