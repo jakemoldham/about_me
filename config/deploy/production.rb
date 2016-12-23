@@ -25,7 +25,7 @@ role :app, domains
 role :web, domains
 role :db,  domains 
 
-server domains.first, user: 'deploy', roles: %w{web app}, my_property: :my_value
+server domains.first, user: 'deploy', roles: %w{web app}, my_property: :my_value, keys: ["~/.ssh/id_rsa"]
 
 # Configuration
 # =============
