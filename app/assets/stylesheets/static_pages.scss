@@ -15,25 +15,25 @@
 // Navigation customization alignment
 
 #pp-nav.right {
-    right: 17px;
+  right: 17px;
 }
 
 // fixed background images
 
 #section1 {
   background-image: image-url('photo-1452573992436-6d508f200b30.jpg');
-   @media screen and (max-width: 1000px){
+  @media screen and (max-width: 1000px){
     background-size: 2200px;
-   } 
+  } 
 }
 
 .custom4 {
   background-image: image-url('header.png');
   background-size: 2000px;
   height: 310px;
-     @media screen and  (min-width: 1900px) {
-     background-size: 3000px;
-   }
+  @media screen and  (min-width: 1900px) {
+    background-size: 3000px;
+  }
 }
 
 #section4 .content {
@@ -51,9 +51,9 @@
   margin-top: 15%;
   min-width: 20%;
   max-width: 90%;
-   @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px){
     margin-top: 100px;
-   } 
+  } 
 }
 
 .logohero, #logoherostatic {
@@ -114,6 +114,80 @@
   }
 }
 
+#herotextborder {
+  height: 50px;
+  margin-left: 50%;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-color: yellow;
+  @media screen and (max-width: 500px){
+    border: none;
+  } 
+}
+
+.herotextfull, .herotextstack, .herotextruby, .herotextdev , .herotextcycle, .herotextenth {
+  color: white;
+  font-size: 18px;
+  display: inline-block;
+  position: absolute;
+}
+
+.herotextfull {
+  margin: 0 0 0 -100%;  
+  transition: margin 4s;
+}
+
+.herotextfullmv {
+  margin: 0 0 0 20px;
+}
+
+.herotextstack {
+  margin: -100% 0 0 68px;
+  transition: margin 4s;
+}
+
+.herotextstackmv {
+  margin: 0 0 0 68px;
+}
+
+.herotextruby {
+  margin: 0 0 0 100%;
+  transition: margin 4s;
+}
+
+.herotextrubymv {
+  margin: 0 0 0 130px;
+}
+
+.herotextdev {
+  margin: 100% 0 0 185px;
+  transition: margin 4s;
+}
+
+.herotextdevmv {
+  margin: 0 0 0 185px;
+}
+
+.herotextcycle {
+  margin: 50% 0 0 -100% ;
+  transition: margin 4s;
+}
+
+.herotextcyclemv {
+  margin: 28px 0 0 20px;
+}
+
+.herotextenth {
+  margin: 50% 0 0 100%;
+  transition: margin 4s;
+}
+
+.herotextenthmv {
+  margin: 28px 0 0 105px;
+}
+
 #herotext {
   color: white;
   margin-left: 50%;
@@ -125,26 +199,26 @@
   border-right: none;
   border-bottom: none;
   border-color: yellow;
-   @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px){
     border: none;
-   } 
+  } 
 }
 
 // Section 2 content
 
 #section2-content {
   margin-top: 80px;
-   h3 {
+  h3 {
     color: black;
     font-size: 30px;
     font-family: 'QuadonMedium';
-   } p {
+  } p {
     width: 700px; 
     color: grey;
     font-size: 20px;
     font-family: 'Quadon';
     letter-spacing: 1px;
-   } button {
+  } button {
     color: grey;
     font-size: 16px;
     border: none;
@@ -154,15 +228,15 @@
     font-family: 'ProximaNova';
     font-weight: 2;
     letter-spacing: 1px;
-   } button:hover {
+  } button:hover {
     color: yellow;
     background-color: black; 
-   } @media screen and (max-width: 700px){
+  } @media screen and (max-width: 700px){
     margin-top: 100px;
-   } #downloadicon {
+  } #downloadicon {
     margin-top: -4px;
     margin-left: 5px;
-   }
+  }
 }
 
 .experience {
@@ -189,19 +263,19 @@
   height: 600px;
   width: 700px;
   color: white;
- #agogelogo, #med-forums-logo, #r7_logo, #apex-logo, #cappahealth, #village-logo {
-   padding: 10px 20px;
- } #r7_logo {
- } #med-forums-logo, #cappahealth {
-   width: 312px;
- } #nikola_motor_logo {
-   padding: 0;
-   width: 380px;
- } #cappahealth, #apex-logo {
-   margin-top: 20px;
- } #linxware {
-   padding: 0 23px;
- }
+  #agogelogo, #med-forums-logo, #r7_logo, #apex-logo, #cappahealth, #village-logo {
+    padding: 10px 20px;
+  } #r7_logo {
+  } #med-forums-logo, #cappahealth {
+    width: 312px;
+  } #nikola_motor_logo {
+    padding: 0;
+    width: 380px;
+  } #cappahealth, #apex-logo {
+    margin-top: 20px;
+  } #linxware {
+    padding: 0 23px;
+  }
 }
 
 // Section 4 content

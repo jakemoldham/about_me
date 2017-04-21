@@ -21,10 +21,33 @@
           li
             = link_to "How To Live", to_live_stages_path, method: :get, id: 'vim-link-home'
     = image_tag('dreaming.png', id: 'dreaming')
-    p#herotext
-      | FULL STACK RUBY DEVELOPER
-      br
-      |  CYCLING ENTHUSIAST
+    #herotextborder
+      p.herotextfull
+        | FULL
+      p.herotextstack
+        | STACK
+      p.herotextruby
+        | RUBY
+      p.herotextdev
+        | DEVELOPER
+      p.herotextcycle
+        | CYCLING
+      p.herotextenth
+        | ENTHUSIAST
+    javascript:
+      $(document).ready(function(){
+        $('.herotextfull').addClass('herotextfullmv');
+        $('.herotextstack').addClass('herotextstackmv');
+        $('.herotextruby').addClass('herotextrubymv');
+        $('.herotextdev').addClass('herotextdevmv');
+        $('.herotextcycle').addClass('herotextcyclemv');
+        $('.herotextenth').addClass('herotextenthmv');
+      })
+
+    /p#herotext
+    /  | FULL STACK RUBY DEVELOPER
+    /  br
+    /  |  CYCLING ENTHUSIAST
   #section2.section
     = image_tag('logo-dark.png', class: 'logohero')
     .container
