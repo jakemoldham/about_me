@@ -181,11 +181,22 @@
 
 .herotextenth {
   margin: 50% 0 0 100%;
-  transition: margin 4s;
+  transition: margin 2s;
+  transform: rotate(30deg);
 }
 
 .herotextenthmv {
   margin: 28px 0 0 105px;
+}
+
+.herotextenthmv-delay {
+  transition: 1s;
+  transform: rotate(-10deg);
+}
+
+.herotextenthmv-delay2 {
+  transition: 1s;
+  transform: rotate(0deg);
 }
 
 #herotext {

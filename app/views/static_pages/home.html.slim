@@ -40,8 +40,12 @@
         $('.herotextstack').addClass('herotextstackmv');
         $('.herotextruby').addClass('herotextrubymv');
         $('.herotextdev').addClass('herotextdevmv');
-        $('.herotextcycle').addClass('herotextcyclemv');
-        $('.herotextenth').addClass('herotextenthmv');
+        $('.herotextcycle').addClass('herotextcyclemv').delay(6000).queue(function(){
+            $('.herotextenth').addClass('herotextenthmv-delay2');
+        });
+        $('.herotextenth').addClass('herotextenthmv').delay(4000).queue(function(){
+          $('.herotextenth').addClass('herotextenthmv-delay');                  
+        });
       })
 
     /p#herotext
